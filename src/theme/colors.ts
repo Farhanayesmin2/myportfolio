@@ -1,26 +1,19 @@
 export const COLORS = {
-    BRAND: {
-        PRIMARY: "#213431",
-        SECONDARY: "#005B4C", 
-        ACCENT: "#FFC119",
-        YELLOW:   "#FEB609",
+    BASE: {
+        WHITE: "#e0e0e0",
+        GRAY: "#f0f0f0",
     },
-    NEUTRAL: {
-        GRAY: "#EBEBEB",
-        WHITE: "#FFFFFF",
-        LIGHT_GRAY: "#EAEEF9",
-        WHITE_GRAY: "#F8F8F8",
-        LIGHT_GREEN: "#667085",
+    SHADOW: {
+        BOX: "#262c31",
     },
-    FONT:{
-        DARK_GRAY: "#39364F",
-        
+    NAVBAR: {
+        TEXT: "#000000",
     },
-    ICON:{
-        BLACK: "#212121"
-    }
+    BORDER: {
+        DEFAULT: "#6b7280",
+        WHITE: "#f8f8f8"
+    },
 };
 
-export type ColorKey = keyof typeof COLORS.BRAND | keyof typeof COLORS.NEUTRAL;
-
+export type ColorKey = keyof typeof COLORS.BASE | keyof typeof COLORS.SHADOW | keyof typeof COLORS.NAVBAR | keyof typeof COLORS.BORDER;
 export type Theme = keyof typeof COLORS;
