@@ -11,6 +11,7 @@ export const COLORS = {
     },
     BORDER: {
         DEFAULT: "#6b7280",
+        WHITE: "#f8f8f8"
     },
 };
 
