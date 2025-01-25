@@ -1,81 +1,46 @@
-import { COLORS } from "@/src/theme/colors";
-import { borderRadius, typography } from "@/src/theme";
 
-const styles = {
-  navbarContainer: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    padding: "16px 24px",
-    width: "1737px",
-    height: "52px",
-    margin: "36px auto",
-    color: COLORS.BRAND.PRIMARY,
+import { CSSProperties } from 'react';
+import { COLORS } from "@/theme/colors";
+
+export const styles: { [key: string]: CSSProperties } = {
+  nav: {
+    width: '100%',
+    padding: '16px',
+    backgroundColor: COLORS.BASE.GRAY,
+    boxShadow: `0 2px 4px ${COLORS.SHADOW.BOX}`,
+    borderBottom: `1px solid ${COLORS.BORDER.DEFAULT}`,
+    position: 'fixed', // Fix the navbar at the top
+    top: 0,
+    left: 0,
+    zIndex: 1000, // Ensure the navbar is above other content
   },
-  logoContainer: {
-    display: "flex",
-    alignItems: "center",
-    gap: "56px", 
+  container: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    maxWidth: '1300px', // Fixed width
+    width: '100%',
+    margin: '0 auto', // Center the container
   },
-  logo: {
-    width: "160px",
-    height: "32px",
-    objectFit: "contain",
+  brand: {
+    fontSize: '24px',
+    fontWeight: 'bold',
+    color: COLORS.NAVBAR.TEXT,
+    margin: 0, // Remove default margin for h1
   },
-  navIconButton: {
-    display: "flex",
-    alignItems: "center",
-    gap: "5px", 
-    fontSize: "16px",
-    cursor: "pointer",
+  links: {
+    display: 'flex',
+    gap: '16px',
   },
-  searchInput: {
-    width: "237px",
-    height: "41px",
-    padding: "10px 40px 10px 12px",
-    borderRadius: borderRadius.md,
-    border: "1px solid #ccc",
-    outline: "none",
-    fontFamily: typography.Small_Text_Short,
-    fontSize: "12px",
-    color: COLORS.BRAND.PRIMARY,
+  link: {
+    color: COLORS.NAVBAR.TEXT,
+    textDecoration: 'none',
+    cursor: 'pointer',
+    fontSize: '16px',
+    fontWeight: '500',
+    transition: 'color 0.3s ease',
   },
-  searchButton: {
-    position: "absolute",
-    top: "50%",
-    right: "10px",
-    transform: "translateY(-50%)",
-    width: "18px",
-    height: "18px",
-    backgroundColor: "transparent",
-    border: "none",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    cursor: "pointer",
-    color: COLORS.BRAND.SECONDARY,
-    opacity: 0.8,
-  },
-  searchButtonHover: {
-    color: COLORS.BRAND.PRIMARY,
-  },
-  navbarLeft: {
-    display: "flex",
-    alignItems: "center",
-    gap: "56px", 
-  },
-  navbarMiddle: {
-    display: "flex",
-    gap: "16px",
-    fontSize: "16px",
-    fontWeight: "500",
-  },
-  navbarRight: {
-    display: "flex",
-    gap: "10px",
-    alignItems: "center",
-    font: "14px",
+  linkHover: {
+    color: COLORS.BORDER.DEFAULT, // Change this to your desired hover color
   },
 };
-
-export default styles;
