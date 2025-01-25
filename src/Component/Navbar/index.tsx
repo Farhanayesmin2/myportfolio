@@ -1,4 +1,6 @@
-'use client'
+
+'use client'; 
+
 import React, { useState } from 'react';
 import { styles } from './styles';
 
@@ -17,7 +19,7 @@ const Navbar = () => {
     <nav style={styles.nav}>
       <div style={styles.container}>
         {/* Logo or Brand Name */}
-        <div style={styles.brand}>Simanta</div>
+        <h1 style={styles.brand}>Farhana Yesmin</h1>
 
         {/* Navigation Links */}
         <div style={styles.links}>
